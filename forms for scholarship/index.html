@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Form Navigation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="personal-details.html" class="active">Personal Details</a></li>
+            <li><a href="caste-documents.html">Caste & Documents</a></li>
+            <li><a href="academic-documents.html">Academic Documents</a></li>
+        </ul>
+        <div class="progress-bar" id="progress-bar"></div>
+    </nav>
+    <!-- <div class="welcome-section">
+        <h1>Welcome to the Multi-Form System</h1>
+        <p>Select a form from the navigation above to get started.</p>
+    </div> -->
+
+    <script>
+        // Progress bar logic
+        const progressBar = document.getElementById('progress-bar');
+        const navLinks = document.querySelectorAll('nav ul li a');
+        const progressStep = 100 / (navLinks.length - 1);
+
+        navLinks.forEach((link, index) => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                link.classList.add('active');
+                progressBar.style.width = `${index * progressStep}%`;
+            });
+        });
+    </script>
+</body>
+</html>
+

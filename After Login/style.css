@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(0deg, white, #076585);
+    color: #fff;
+    overflow: hidden;
+}
+
+#digind {
+    height: 53px;
+    margin-left: 15px;
+    border-right: 2px solid black;
+    padding-right: 10px;
+}
+
+#pmsss {
+    height: 56px;
+    margin-right: 770px; /* Reduced margin to fit within the flexbox */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    font-size: 1.4rem;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    color: #00c6ff;
+}
+
+main {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-container {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#anchor {
+    text-decoration: none;
+}
+
+.user {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    height: 400px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.card h2 {
+    margin: 0;
+    color: #fff;
+}
+
+.card a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+#Apply {
+    background-color: #007bff;
+}
+
+#Announcement {
+    background-color: #28a745;
+}
+
+#Track {
+    background-color: #ffc107;
+}
+
+

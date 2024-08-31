@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="personal-details.html" class="active">Personal Details</a></li>
+            <li><a href="caste-documents.html">Caste & Documents</a></li>
+            <li><a href="academic-documents.html">Academic Documents</a></li>
+        </ul>
+        <div class="progress-bar" id="progress-bar"></div>
+    </nav>
+
+    <div class="form-section">
+        <h2>Personal Details</h2>
+        <form action="caste-documents.html" method="get">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <select id="Gender">
+                <option>Choose your Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <input type="submit" value="Next">
+        </form>
+    </div>
+
+    <script>
+        // Update progress bar based on form page
+        const progressBar = document.getElementById('progress-bar');
+        progressBar.style.width = '0%';  // Set the initial progress for this form page
+    </script>
+</body>
+</html>
+

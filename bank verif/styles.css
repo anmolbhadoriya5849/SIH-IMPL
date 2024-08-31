@@ -1,0 +1,88 @@
+/* Basic reset for consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Form container */
+form#bank-details-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form labels */
+form#bank-details-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+/* Form inputs */
+form#bank-details-form input[type="text"],
+form#bank-details-form input[type="email"],
+form#bank-details-form input[type="password"],
+form#bank-details-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Checkbox styling */
+form#bank-details-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Consent label */
+form#bank-details-form label[for="consent"] {
+    font-weight: normal;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Submit button */
+form#bank-details-form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form#bank-details-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    form#bank-details-form {
+        padding: 15px;
+    }
+
+    form#bank-details-form button[type="submit"] {
+        font-size: 14px;
+    }
+}

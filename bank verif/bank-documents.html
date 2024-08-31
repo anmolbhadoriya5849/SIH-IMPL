@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Bank Details Form</title>
+    <style>
+        /* Basic reset for consistent styling across browsers */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #007bff;
+            color: white;
+            width: 100%;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Form container */
+        form#bank-details-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin-top: 80px; /* To offset the header */
+        }
+
+        /* Form labels */
+        form#bank-details-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        /* Form inputs */
+        form#bank-details-form input[type="text"],
+        form#bank-details-form input[type="email"],
+        form#bank-details-form input[type="password"],
+        form#bank-details-form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        /* Checkbox styling */
+        form#bank-details-form input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        /* Consent label */
+        form#bank-details-form label[for="consent"] {
+            font-weight: normal;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        /* Submit button */
+        form#bank-details-form button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        form#bank-details-form button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            form#bank-details-form {
+                padding: 15px;
+            }
+
+            form#bank-details-form button[type="submit"] {
+                font-size: 14px;
+            }
+        }
+
+        /* Pop-up message */
+        .popup-message {
+            display: none;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            font-size: 16px;
+        }
+        #digind{
+    width: 100px;
+    margin-left: 10px;
+    padding-right: 6px;
+    border-right: 3px solid rgb(0, 0, 0);
+  
+    /* margin-bottom: 60px; */
+    /* margin-right: 300px; */
+}
+
+#pmsss{
+    width: 100px;
+  margin-right: 750px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+.header-top {
+    background-color: white;
+    color: #ffffff00;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.header-right a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header with logo space -->
+    <header style="background-color: #ffffff;">
+        <nav class="navbar">
+            <img id="digind" src="../home page/digital india.png" alt="">;
+            <img id="pmsss" src="../home page/pmsss logo.png" alt="">;
+        </nav>
+    </header>
+
+    <!-- Pop-up message -->
+    <div class="popup-message" id="popup-message">
+        Your details have been submitted and verified
+    </div>
+
+    <!-- Bank details form -->
+    <form id="bank-details-form">
+        <h2>Student Bank Details</h2>
+        
+        <label for="account-holder-name">Account Holder Name:</label>
+        <input type="text" id="account-holder-name" name="account-holder-name" required>
+        
+        <label for="bank-name">Bank Name:</label>
+        <input type="text" id="bank-name" name="bank-name" required>
+        
+        <label for="account-number">Account Number:</label>
+        <input type="text" id="account-number" name="account-number" required>
+        
+        <label for="ifsc-code">IFSC Code:</label>
+        <input type="text" id="ifsc-code" name="ifsc-code" required>
+        
+        <label for="branch-name">Branch Name:</label>
+        <input type="text" id="branch-name" name="branch-name">
+        
+        <label for="linked-mobile-number">Mobile Number Linked to Bank:</label>
+        <input type="text" id="linked-mobile-number" name="linked-mobile-number" required>
+        
+        <label for="consent">
+            <input type="checkbox" id="consent" name="consent" required>
+            I agree to the privacy policy and terms.
+        </label>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Show the pop-up message when the page loads
+        window.onload = function() {
+            var popup = document.getElementById('popup-message');
+            popup.style.display = 'block';
+
+            // Hide the pop-up message after 3 seconds
+            setTimeout(function() {
+                popup.style.display = 'none';
+            }, 3000);
+        };
+    </script>
+
+</body>
+</html>
